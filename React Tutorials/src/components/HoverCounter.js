@@ -8,10 +8,14 @@ class HoverCounter extends Component{
         const {count, incrementCount} = this.props
 
         return(
-        <h1 onMouseOver={incrementCount}>Hovered {count} Times</h1>
+        <h1 onMouseOver={incrementCount}>{this.props.name} Hovered {count} Times</h1>
         )
     }
 }
 
 //The component which will use the functionality from the HOC will be wrapped inside the function as an argument and then exported. That function will be in the HOC. Which here means export HoverCounter alongwith the withCounter functionalities.
-export default withCounter(HoverCounter)
+
+//The HoverCounter will not receive the the name prop, instead it will be passed to the HOC 'withCounter'
+
+//10 is the 2nd param in the HOC i.e incrementCount
+export default withCounter(HoverCounter,10)

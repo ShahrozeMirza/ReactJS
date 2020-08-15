@@ -82,8 +82,10 @@ function App() {
       <ErrorBoundary>
         <HeroErrBound heroName="Batman"></HeroErrBound>
       </ErrorBoundary> */}
-      <ClickCounter/>
-      <HoverCounter/>
+       
+       {/* These name props will be passed to HOC not the OriginalComponents/WrappedComponents i.e 'ClickCounter' and 'HoverCounter'. They will be undefined in the orginal components. */}
+      <ClickCounter name="Shahroze"/>
+      <HoverCounter name="Shahroze"/>
     </div>
   );
 }
