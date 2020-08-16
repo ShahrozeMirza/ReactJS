@@ -32,6 +32,10 @@ import HeroErrBound from './components/HeroErrBound'
 import ErrorBoundary from './components/ErrorBoundary';
 import ClickCounter from './components/ClickCounter';
 import HoverCounter from './components/HoverCounter';
+import ClickCounter2 from './components/ClickCounter2';
+import HoverCounter2 from './components/HoverCounter2';
+import RenderPropUser from './components/RenderPropUser';
+import CounterRenderProp from './components/CounterRenderProp';
 
 
 function App() {
@@ -82,10 +86,49 @@ function App() {
       <ErrorBoundary>
         <HeroErrBound heroName="Batman"></HeroErrBound>
       </ErrorBoundary> */}
+
+      {/* Higher Order Components Start  */}
        
        {/* These name props will be passed to HOC not the OriginalComponents/WrappedComponents i.e 'ClickCounter' and 'HoverCounter'. They will be undefined in the orginal components. */}
-      <ClickCounter name="Shahroze"/>
-      <HoverCounter name="Shahroze"/>
+      {/* <ClickCounter name="Shahroze"/> */}
+      {/* <HoverCounter name="Shahroze"/> */}
+
+      {/* Higher Order Components End  */}
+
+      {/* Render Props Start  */}
+
+      {/* <HoverCounter2/>
+      <ClickCounter2/>
+      <RenderPropUser render={(isLoggedIn) => isLoggedIn ? "Shahroze" : "Guest" }/> */}
+
+      {/* Render Props takes a function and we pass the stats and logical methods to that function as parameters/arguments and then in the arrow function we  pass those components which will use the common functionality. To the components which will use the the common functionality we will pass the same parameters (passed as arguments to the render prop i.e 'count' and 'incrementCount') as props. Here the render props are 'ClickCounter2' and 'HoverCounter2'. It is also important to know that the prop need not to be called as render. It could be called anything you wish to but render is kind of the convention. */}
+      
+      {/* <CounterRenderProp render={(count,incrementCount) => ( 
+           <ClickCounter2 count={count} incrementCount={incrementCount} />
+        )}
+      />
+
+        <CounterRenderProp render={(count, incrementCount) => (<HoverCounter2 count={count} 
+        incrementCount={incrementCount} />
+      )}
+       /> */}
+
+       {/* There is a variation of the render props pattern which doesn't even make use of the render prop. Instead the children prop is used. We have to make two simple changes. Instead of the render prop we pass in the function in between the CounterRenderProp(i.e any component which contains the common functionality) components opening and closing tags. Remember anything between the components opening and closing tags will be passed as the children props which, is then accessed to render the UI.*/}
+
+       <CounterRenderProp>
+         {(count,incrementCount) => (
+            <ClickCounter2 count={count} incrementCount={incrementCount} />
+         )}
+       </CounterRenderProp>
+
+       <CounterRenderProp>
+         {(count,incrementCount) => (
+            <HoverCounter2 count={count} incrementCount={incrementCount} />
+         )}
+       </CounterRenderProp>
+
+       {/* Render Props End  */}
+      
     </div>
   );
 }
