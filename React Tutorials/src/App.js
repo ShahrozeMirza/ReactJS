@@ -36,6 +36,8 @@ import ClickCounter2 from './components/ClickCounter2';
 import HoverCounter2 from './components/HoverCounter2';
 import RenderPropUser from './components/RenderPropUser';
 import CounterRenderProp from './components/CounterRenderProp';
+import TopLevel from './components/TopLevel';
+import { UserProvider } from './components/UserContext';
 
 
 function App() {
@@ -115,7 +117,7 @@ function App() {
 
        {/* There is a variation of the render props pattern which doesn't even make use of the render prop. Instead the children prop is used. We have to make two simple changes. Instead of the render prop we pass in the function in between the CounterRenderProp(i.e any component which contains the common functionality) components opening and closing tags. Remember anything between the components opening and closing tags will be passed as the children props which, is then accessed to render the UI.*/}
 
-       <CounterRenderProp>
+       {/* <CounterRenderProp>
          {(count,incrementCount) => (
             <ClickCounter2 count={count} incrementCount={incrementCount} />
          )}
@@ -125,9 +127,15 @@ function App() {
          {(count,incrementCount) => (
             <HoverCounter2 count={count} incrementCount={incrementCount} />
          )}
-       </CounterRenderProp>
+       </CounterRenderProp> */}
 
        {/* Render Props End  */}
+
+       {/* Step 2. Wrap the top level component with the user provider  component and pass the value there in the value attribute in the Provider Component. If there is no Provider Component the default value will be used and displayed, The default value is set in the React.createContext() method.  */}
+
+       <UserProvider value="Shahroze Mirza">
+          <TopLevel/>
+       </UserProvider>
       
     </div>
   );
