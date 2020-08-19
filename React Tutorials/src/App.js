@@ -38,6 +38,8 @@ import RenderPropUser from './components/RenderPropUser';
 import CounterRenderProp from './components/CounterRenderProp';
 import TopLevel from './components/TopLevel';
 import { UserProvider } from './components/UserContext';
+import GetReq from './components/GetReq';
+import PostReq from './components/PostReq';
 
 
 function App() {
@@ -132,10 +134,19 @@ function App() {
        {/* Render Props End  */}
 
        {/* Step 2. Wrap the top level component with the user provider  component and pass the value there in the value attribute in the Provider Component. If there is no Provider Component the default value will be used and displayed, The default value is set in the React.createContext() method.  */}
-
+{/* 
        <UserProvider value="Shahroze Mirza">
           <TopLevel/>
-       </UserProvider>
+       </UserProvider> */}
+
+       {/* React and HTTP  */}
+       {/* GET Method  */}
+       {/* React does not has it's own methods for HTTP requests as it is for UI building only. React only renders the UI using props and states. So to use the data from the server we have to get the data into our components state or props.  We use a library for HTTP requests in React as react does not has its own HTTP request methods. We are using Axion library to make HTTP requests. */}
+       {/* <GetReq/> */}
+
+       {/* POST Method  */}
+       {/* Posting the data is also similar to ajax */}
+       <PostReq/>
       
     </div>
   );
