@@ -8,7 +8,7 @@ import React,{useState} from 'react'
 //4.Assign the returned pair of values to variables using array destructuring and use them in the render functon.
 //Here the first variable/parameter (count) will always contain the current value which is '0' at start and the second parameter/method (setCount) is a method which will accept an argument and update the current state with that argument.
 function HookCounter(){
-    
+    //First (in this case 'count') is the state variable and the second is the setterFunction(in this case'setCount').
     const [count, setCount] = useState(0)
     return(
         //setCount becomes a function call on button click so we use arrow function. When the state is changed the component will re-render. The default value is never used on re-renders.
