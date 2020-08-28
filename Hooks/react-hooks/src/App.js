@@ -5,6 +5,7 @@ import HookCounterCorrect from './components/HookCounterCorrect';
 import UseStateObject from './components/UseStateObject';
 import UseStateArray from './components/UseStateArray';
 import UseEffectA from './components/UseEffectA';
+import UseEffectConditionally from './components/UseEffectConditionally'
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
       {/* <HookCounterCorrect/> */}
       {/* <UseStateObject/> */}
       {/* <UseStateArray/> */}
-      <UseEffectA/>
+      {/* <UseEffectA/> */}
+      <UseEffectConditionally/>
     </div>
   );
 }
