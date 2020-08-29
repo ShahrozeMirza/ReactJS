@@ -6,6 +6,8 @@ import UseStateObject from './components/UseStateObject';
 import UseStateArray from './components/UseStateArray';
 import UseEffectA from './components/UseEffectA';
 import UseEffectConditionally from './components/UseEffectConditionally'
+import UseEffectOnce from './components/UseEffectOnce';
+import UseEffectCleanup from './components/UseEffectCleanup';
 
 function App() {
   return (
@@ -15,7 +17,10 @@ function App() {
       {/* <UseStateObject/> */}
       {/* <UseStateArray/> */}
       {/* <UseEffectA/> */}
-      <UseEffectConditionally/>
+      {/* <UseEffectConditionally/> */}
+       {/* <UseEffectOnce/> */}
+       <UseEffectCleanup/>
+      
     </div>
   );
 }
