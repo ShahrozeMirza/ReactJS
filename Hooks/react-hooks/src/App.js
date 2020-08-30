@@ -8,6 +8,9 @@ import UseEffectA from './components/UseEffectA';
 import UseEffectConditionally from './components/UseEffectConditionally'
 import UseEffectOnce from './components/UseEffectOnce';
 import UseEffectCleanup from './components/UseEffectCleanup';
+import CorrectDependecy from './components/CorrectDependency';
+import DataFetching from './components/DataFetching';
+import FetchDataIndividual from './components/FetchDataIndividual';
 
 function App() {
   return (
@@ -19,8 +22,10 @@ function App() {
       {/* <UseEffectA/> */}
       {/* <UseEffectConditionally/> */}
        {/* <UseEffectOnce/> */}
-       <UseEffectCleanup/>
-      
+       {/* <UseEffectCleanup/> */}
+      {/* <CorrectDependecy/> */}
+      {/* <DataFetching/> */}
+      <FetchDataIndividual/>
     </div>
   );
 }
