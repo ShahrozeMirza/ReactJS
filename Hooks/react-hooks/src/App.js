@@ -12,6 +12,7 @@ import CorrectDependecy from './components/CorrectDependency';
 import DataFetching from './components/DataFetching';
 import FetchDataIndividual from './components/FetchDataIndividual';
 import ComponentC from './components/ComponentC';
+import UseReducerCounter from './components/UseReducerCounter';
 
 
 //for useContext Hook Tutorial start
@@ -37,15 +38,15 @@ function App() {
       
       {/* for useContext Hook Tutorial start */}
 
-      {/* Provide this context with a value and the provider must wrap the children for th value to be available in the children */}
-
+      {/* Provide this context with a value and the provider must wrap the children for the value to be available in the children */}
+{/* 
       <UserContext.Provider value={'Vishwas'}>
          <ChannelContext.Provider value={'Codevolution'}>
           <ComponentC/>
          </ChannelContext.Provider>
-      </UserContext.Provider>
+      </UserContext.Provider> */}
       {/* for useContext Hook Tutorial end */}
-     
+     <UseReducerCounter/>
     </div>
   );
 }
