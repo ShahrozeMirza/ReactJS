@@ -13,6 +13,7 @@ import DataFetching from './components/DataFetching';
 import FetchDataIndividual from './components/FetchDataIndividual';
 import ComponentC from './components/ComponentC';
 import UseReducerCounter from './components/UseReducerCounter';
+import UseReducerCounterObj from './components/UseReducerCounterObj';
 
 
 //for useContext Hook Tutorial start
@@ -46,7 +47,8 @@ function App() {
          </ChannelContext.Provider>
       </UserContext.Provider> */}
       {/* for useContext Hook Tutorial end */}
-     <UseReducerCounter/>
+     {/* <UseReducerCounter/> */}
+     <UseReducerCounterObj/>
     </div>
   );
 }
