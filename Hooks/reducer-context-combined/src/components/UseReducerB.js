@@ -1,9 +1,10 @@
 import React from 'react'
+import UseReducerD from './UseReducerD'
 
 function UseReducerB() {
   return (
     <div>
-      Component B
+      <UseReducerD/>
     </div>
   )
 }
