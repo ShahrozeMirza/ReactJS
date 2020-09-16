@@ -3,31 +3,31 @@ import axios from 'axios'
 
 function DataFetchUseState() {
 
- const [loading,setLoading] = useState(true)
- const [error, setError] = useState('')
- const [post, setPost] = useState([])
+ const [loading,setLoading] = useState(true);
+ const [error, setError] = useState('');
+ const [post, setPost] = useState([]);
  console.log(post);
  
 
  useEffect(() => {
     axios.get('https://jsonplaceholder.typicode.com/users')
     .then(response => {
-        setLoading(false)
-        setPost(response.data)
-        setError('')
+        setLoading(false);
+        setPost(response.data);
+        setError('');
         
         
     })
     .catch(error =>{
-        setLoading(false)
-        setPost([])
-        setError('Something Went Wrong')
+        setLoading(false);
+        setPost([]);
+        setError('Something Went Wrong');
     })
  },[])
  
   return (
     <div>
-        <h1>{loading ? 'Data Loading' : post.id}</h1>
+        <h1>{loading ? 'Data Loading' : post && post.length ? post[0].id : null}</h1>
         <h1>{error ? error : null}</h1>
     </div>
   )
