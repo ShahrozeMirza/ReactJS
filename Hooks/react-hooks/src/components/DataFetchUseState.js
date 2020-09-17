@@ -6,8 +6,7 @@ function DataFetchUseState() {
  const [loading,setLoading] = useState(true);
  const [error, setError] = useState('');
  const [post, setPost] = useState([]);
- console.log(post);
- 
+
 
  useEffect(() => {
     axios.get('https://jsonplaceholder.typicode.com/users')
@@ -23,11 +22,11 @@ function DataFetchUseState() {
         setPost([]);
         setError('Something Went Wrong');
     })
- },[])
+ },[]);
  
   return (
     <div>
-        <h1>{loading ? 'Data Loading' : post && post.length ? post[2].email : null}</h1>
+        <h1>{loading ? 'Data Loading' : post && post.length ? post[1].email : null}</h1>
         <h1>{error ? error : null}</h1>
     </div>
   )

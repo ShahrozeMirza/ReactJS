@@ -16,6 +16,7 @@ import UseReducerCounter from './components/UseReducerCounter';
 import UseReducerCounterObj from './components/UseReducerCounterObj';
 import UseReducerMultiple from './components/UseReducerMutiple';
 import DataFetchUseState from './components/DataFetchUseState';
+import DataFetchUseReducer from './components/DataFetchUseReducer'
 
 
 //for useContext Hook Tutorial start
@@ -53,8 +54,8 @@ function App() {
      {/* <UseReducerCounterObj/> */}
      {/* <UseReducerMultiple/> */}
 
-     <DataFetchUseState/>
-
+     {/*<DataFetchUseState/>*/}
+    <DataFetchUseReducer/>
     </div>
     
 
