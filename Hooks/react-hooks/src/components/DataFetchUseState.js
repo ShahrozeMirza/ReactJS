@@ -27,7 +27,7 @@ function DataFetchUseState() {
  
   return (
     <div>
-        <h1>{loading ? 'Data Loading' : post && post.length ? post[0].id : null}</h1>
+        <h1>{loading ? 'Data Loading' : post && post.length ? post[2].email : null}</h1>
         <h1>{error ? error : null}</h1>
     </div>
   )
