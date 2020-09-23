@@ -5,6 +5,7 @@ import ParentComponent from './components/ParentComponent';
 import UseMemoCounter from './components/UseMemoCounter';
 import InputRef from './components/InputRef';
 import UseRefInterval from './components/UseRefInterval';
+import ParentRef from './components/ParentRef';
 
 function App() {
   
@@ -13,7 +14,8 @@ function App() {
       {/* <ParentComponent/> */}
       {/* <UseMemoCounter/> */}
       {/* <InputRef/> */}
-      <UseRefInterval/>
+      {/*<UseRefInterval/>*/}
+      <ParentRef/>
     </div>
   );
 }
