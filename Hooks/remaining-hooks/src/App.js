@@ -10,6 +10,7 @@ import DocTitleOne from './customHooks/DocTitleOne';
 import DocTitleTwo from './customHooks/DocTitleTwo';
 import CounterOne from "./customHooks/customCounterHook/CounterOne";
 import CounterTwo from "./customHooks/customCounterHook/CounterTwo";
+import UserForm from './customHooks/customInput/UserForm';
 
 function App() {
   
@@ -22,8 +23,9 @@ function App() {
       {/*<ParentRef/>*/}
       {/*<DocTitleOne/>*/}
       {/*<DocTitleTwo/>*/}
-      <CounterOne/>
-      <CounterTwo/>
+      {/* <CounterOne/> */}
+      {/* <CounterTwo/> */}
+      <UserForm/>
     </div>
   );
 }
