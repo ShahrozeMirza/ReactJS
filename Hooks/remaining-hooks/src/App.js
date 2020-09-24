@@ -6,6 +6,10 @@ import UseMemoCounter from './components/UseMemoCounter';
 import InputRef from './components/InputRef';
 import UseRefInterval from './components/UseRefInterval';
 import ParentRef from './components/ParentRef';
+import DocTitleOne from './customHooks/DocTitleOne';
+import DocTitleTwo from './customHooks/DocTitleTwo';
+import CounterOne from "./customHooks/customCounterHook/CounterOne";
+import CounterTwo from "./customHooks/customCounterHook/CounterTwo";
 
 function App() {
   
@@ -15,7 +19,11 @@ function App() {
       {/* <UseMemoCounter/> */}
       {/* <InputRef/> */}
       {/*<UseRefInterval/>*/}
-      <ParentRef/>
+      {/*<ParentRef/>*/}
+      {/*<DocTitleOne/>*/}
+      {/*<DocTitleTwo/>*/}
+      <CounterOne/>
+      <CounterTwo/>
     </div>
   );
 }
